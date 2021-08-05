@@ -1,1 +1,1 @@
-# facc - Fish and Chips Classifier
+# facc - fish and chips classifier
