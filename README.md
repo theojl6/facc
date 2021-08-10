@@ -7,7 +7,7 @@ Set up and activate Python virtual environment and install requirements
 
 ```shell
 $ python -m venv env
-$ env/Scripts/activate
+$ env\Scripts\activate
 $ pip install requirements.txt
 ```
 Upload photo and predict.
