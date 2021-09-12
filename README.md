@@ -28,14 +28,6 @@ $ python export_deep_model.py
 $ python app.py
 ```
 
-Set up and activate Python virtual environment and install requirements
-
-```shell
-$ python -m venv env
-$ env\Scripts\activate
-$ pip install -r requirements.txt
-```
-
 # Run local development server
 
 ```shell
