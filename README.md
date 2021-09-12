@@ -28,12 +28,6 @@ $ python export_deep_model.py
 $ python app.py
 ```
 
-# Run local development server
-
-```shell
-$ app.py
-```
-
 Go to http://127.0.0.1:5000/ on browser
 
 Upload photo and predict.
