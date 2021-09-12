@@ -1,1 +1,12 @@
+# Bytecode
+__pycache__/
+
+# Environment
 venv/
+env/
+
+# Model
+models/
+
+# Data
+data/

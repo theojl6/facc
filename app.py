@@ -1,7 +1,8 @@
 import os
 import numpy as np
 from flask import Flask, request, jsonify, render_template, send_from_directory
-import pickle
+import tensorflow as tf
+from tensorflow import keras
 import cv2
 
 
@@ -10,7 +11,7 @@ IMAGE_UPLOADS = 'static/uploads/'
 app = Flask(__name__)
 app.config['IMAGE_UPLOADS'] = IMAGE_UPLOADS
 
-model = pickle.load(open('models/facc_model.pkl', 'rb'))
+model = keras.models.load_model('models/fine_tuned_xception_facc')
 
 @app.route('/')
 def home():
@@ -24,10 +25,11 @@ def predict():
     img = cv2.imread(os.path.join(app.config["IMAGE_UPLOADS"], img.filename))
     img = cv2.resize(img, (256, 256))
     img = img / 255.
-    img = img.reshape(1, 256 * 256 * 3)
+    img = np.expand_dims(img, axis=0)
     prediction = model.predict(img)
-    output = prediction[0]
-    return render_template('index.html', prediction_text='Image is {}'.format(output))
+    output = prediction[0][0]
+    result = ('fac' if output >= 0 else 'not fac')
+    return render_template('index.html', prediction_text='Image is {}'.format(result))
     
 
 if __name__ == "__main__":
