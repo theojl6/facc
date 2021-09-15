@@ -35,3 +35,5 @@ $ python app.py
 Go to http://127.0.0.1:5000/ on browser
 
 Upload photo and predict.
+
+![Screenshot 1](screenshots/1.png)
