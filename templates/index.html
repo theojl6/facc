@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
+  <head> </head>
 
-<head>
-</head>
+  <body>
+    <div class="container">
+      <h1>facc, short for Fish And Chips Classifier</h1>
+      <form
+        action="{{url_for('predict')}}"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="custom-file">
+          <input type="file" name="image" id="image" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict fish and chips
+        </button>
+      </form>
 
-<body>
-  <div class="container">
-      <h1>facc</h1>
-    <form action="{{url_for('predict')}}"method="post" enctype="multipart/form-data">
-      <div class="custom-file">
-        <input type="file" class="custom-file-input" name="image" id="image">
-      </div>
-      <button type="submit" class="btn btn-primary btn-block btn-large">Predict fish and chips</button>
-
-    </form>
-
-    <br>
-    <br>
-    {{prediction_text}}
-
-  </div>
-
-
-</body>
-
+      <br />
+      <br />
+      {{prediction_text}}
+    </div>
+  </body>
 </html>

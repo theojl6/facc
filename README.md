@@ -13,18 +13,22 @@ $ env\Scripts\activate
 $ pip install -r requirements.txt
 ```
 
-# Train and export models into a 'models' folder
+# Unzip data
+Manually unzip data.zip for the training data
+
+# Run python scripts to train and export models into a 'models' folder
 
 ```shell
-# Linear machine learning classifier
-$ python export_ml_classifier.py
-# Or a fine-tuned deep learning model
+# A fine-tuned deep learning model
 $ python export_deep_model.py
+# Linear machine learning classifier (WARNING: work in progress)
+$ python export_ml_classifier.py
 ```
 
 # Run local development server for Flask app
 
 ```shell
+# Uses the deep learning model
 $ python app.py
 ```
 

@@ -3,6 +3,8 @@ import numpy as np
 import os
 import pickle
 
+"""TODO: Implement random cropping instead of cv2.resize"""
+
 def load_images(folder):
 	images = []
 	for filename in os.listdir(folder):
