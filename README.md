@@ -42,6 +42,6 @@ Upload photo and predict.
 
 facc deep learning is trained using less than a total of 200 images, which consists of fish and chips, and food that is not fish and chips.
 
-Transfer learning - a pre-trained model was used and its input layer and last layers have been replaced, the model was then fine-tuned using our small dataset of less than 200 images, in order to serve our purpose of predicting images that are fish and chips versus not fish and chips.
+Transfer learning - a pre-trained Xception model with ImageNet was used, and its input layer and last layers have been replaced, the model was then fine-tuned using our small dataset of less than 200 images, in order to serve our purpose of predicting images that are fish and chips versus not fish and chips.
 
 ~ 85% validation accuracy is achieved
