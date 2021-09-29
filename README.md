@@ -4,13 +4,13 @@ fish and chips classifier, or facc for short, provides a user experience to clas
 
 # Development on Windows
 
-```shell
+```cmd
 # Create a Python virtual environment
-$ python -m venv env
+python -m venv env
 # Activate virtual environment
-$ env\Scripts\activate
+env\Scripts\activate
 # Install dependencies
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 # Unzip data
@@ -18,18 +18,16 @@ Manually unzip data.zip for the training data
 
 # Run python scripts to train and export models into a 'models' folder
 
-```shell
+```cmd
 # A fine-tuned deep learning model
-$ python export_deep_model.py
-# Linear machine learning classifier (WARNING: work in progress)
-$ python export_ml_classifier.py
+python train_model.py
 ```
 
 # Run local development server for Flask app
 
-```shell
+```cmd
 # Uses the deep learning model
-$ python dl_app.py
+python app.py
 ```
 
 Go to http://127.0.0.1:5000/ on browser
@@ -42,6 +40,6 @@ Upload photo and predict.
 
 facc deep learning is trained using less than a total of 200 images, which consists of fish and chips, and food that is not fish and chips.
 
-Transfer learning - a pre-trained Xception model with ImageNet was used, and its input layer and last layers have been replaced, the model was then fine-tuned using our small dataset of less than 200 images, in order to serve our purpose of predicting images that are fish and chips versus not fish and chips.
+Transfer learning - a pre-trained ResNet50 model with ImageNet was used, and its input layer and last layers have been replaced, the model was then fine-tuned using our small dataset of less than 200 images, in order to serve our purpose of predicting images that are fish and chips versus not fish and chips.
 
 ~ 85% validation accuracy is achieved
