@@ -29,7 +29,7 @@ $ python export_ml_classifier.py
 
 ```shell
 # Uses the deep learning model
-$ python app.py
+$ python dl_app.py
 ```
 
 Go to http://127.0.0.1:5000/ on browser
