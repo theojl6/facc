@@ -17,8 +17,18 @@ pip install -r requirements.txt
 
 Fish and chips             |  Not fish and chips
 :-------------------------:|:-------------------------:
-![](screenshots/fish_and_chips.jpg)  |  ![](screenshots/not_fish_and_chips.jpg)
+![](screenshots/fish_and_chips.jpg)  |  ![](screenshots/food.jpg)
 
+<table>
+  <tr>
+    <td>
+      <img src="screenshots/fish_and_chips.jpg">
+    </td>
+    <td>
+      <img src="screenshots/not_fish_and_chips.jpg">
+    </td>
+  </tr>
+</table>
 ## Unzip data
 Manually unzip data.zip for the training data
 
