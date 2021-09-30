@@ -15,6 +15,9 @@ pip install -r requirements.txt
 
 # Image data
 
+![fishandchips](screenshots/fish_and_chips.jpg){ align=left }
+![notfishandchips](screenshots/not_fish_and_chips.jpg){ align=right }
+
 ## Unzip data
 Manually unzip data.zip for the training data
 
@@ -40,7 +43,7 @@ facc
 └── README.md
 ```
 
-## Alternatively, use [image-scraper](https://github.com/theojl6/image-scraper) to create your own dataset in the format above
+## Alternatively, use [image-scraper](https://github.com/theojl6/image-scraper){:target="_blank"} to create your own dataset in the format above
 In this case, use image-scraper twice to get folders for 'fishandchipsimgs' and 'notfishandchipsimgs', and put them into a folder named 'data'.
 
 
