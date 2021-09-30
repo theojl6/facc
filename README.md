@@ -2,7 +2,7 @@
 
 fish and chips classifier, or facc for short, provides a user experience to classify images into two categories: 'fish and chips' and 'not fish and chips'
 
-# Development on Windows
+## Development on Windows
 
 ```cmd
 # Create a Python virtual environment
@@ -13,17 +13,45 @@ env\Scripts\activate
 pip install -r requirements.txt
 ```
 
-# Unzip data
+# Image data
+
+## Unzip data
 Manually unzip data.zip for the training data
 
-# Run python scripts to train and export models into a 'models' folder
+Data folder structure should look like this:
+```
+facc
+├── data.zip
+├── data
+│  ├── fishandchipsimgs
+│  │  ├── 0.jpg
+│  │  ├── 1.jpg
+│  │  ├── 2.jpg
+│  │  └── ...
+│  └── notfishandchipsimgs
+│     ├── 0.jpg
+│     ├── 1.jpg
+│     ├── 2.jpg
+│     └── ...
+├── screenshots
+├── .gitignore
+├── app.py
+├── helper_functions.py
+└── README.md
+```
+
+## Alternatively, use [image-scraper](https://github.com/theojl6/image-scraper) to create your own dataset in the format above
+In this case, use image-scraper twice to get folders for 'fishandchipsimgs' and 'notfishandchipsimgs', and put them into a folder named 'data'.
+
+
+## Run python scripts to train and export a deep learning model into a 'models' folder
 
 ```cmd
 # A fine-tuned deep learning model
 python train_model.py
 ```
 
-# Run local development server for Flask app
+## Run local development server for Flask app
 
 ```cmd
 # Uses the deep learning model
@@ -36,7 +64,7 @@ Upload photo and predict.
 
 ![Screenshot 1](screenshots/1.png)
 
-# How it works - deep learning
+## How it works - deep learning
 
 facc deep learning is trained using less than a total of 200 images, which consists of fish and chips, and food that is not fish and chips.
 
