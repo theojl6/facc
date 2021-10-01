@@ -1,4 +1,4 @@
-# facc - fish and chips classifier
+# facc - fish and chips image classifier
 
 fish and chips classifier, or facc for short, provides a user experience to classify images into two categories: 'fish and chips' and 'not fish and chips'
 
@@ -75,3 +75,5 @@ facc deep learning is trained using less than a total of 200 images, which consi
 Transfer learning - a pre-trained ResNet50 model with ImageNet was used, and its input layer and last layers have been replaced, the model was then fine-tuned using our small dataset of less than 200 images, in order to serve our purpose of predicting images that are fish and chips versus not fish and chips.
 
 ~ 90% validation accuracy is achieved
+
+[MIT License](LICENSE)
